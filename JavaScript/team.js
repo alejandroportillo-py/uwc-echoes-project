@@ -7,15 +7,14 @@
    ============================================================ */
 
 const TEAM_MEMBERS = [
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-01.jpg' },
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-02.jpg' },
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-03.jpg' },
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-04.jpg' },
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-05.jpg' },
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-06.jpg' },
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-07.jpg' },
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-08.jpg' },
-  { name: '[TEAM MEMBER NAME]', country: '[COUNTRY]', role: '[ROLE]', photo: 'Assets/Images/Team/member-09.jpg' },
+  { name: '[Kianny]', country: '[Costa Rica]', role: '[Design of the interactive digital presentation]', photo: 'Assets/Images/Team/kianny.jpeg' },
+  { name: '[Marcelo]', country: '[Costa Rica]',role: '[Creation of the project website]', photo: 'Assets/Images/Team/marcelo.jpeg' },
+  { name: '[Enid]', country: '[Costa Rica]',role: '[Connection to the UWC sustainability framework]', photo: 'Assets/Images/Team/enid.jpeg' },
+  { name: '[Rebecca]', country: '[Italy]',role: '[Comedic dramatization of the pitch]', photo: 'Assets/Images/Team/rebecca.jpeg' },
+  { name: '[Sofia]', country: '[Colombia]',role: '[Direction of structured ideation For the presentation]', photo: 'Assets/Images/Team/sofia.jpeg' },
+  { name: '[Mung]', country: '[Myanmar]',role: '[Design of team identity and uniform]', photo: 'Assets/Images/Team/mung.jpeg' },
+  { name: '[Anahi]', country: '[Kenya]',role: '[Local-Santa Ana context analysis]', photo: 'Assets/Images/Team/anahi.jpeg' },
+  { name: '[Mafer]', country: '[El Salvador]',role: '[Production of the promotional video]', photo: 'Assets/Images/Team/mafer.jpeg' },
 ];
 
 function renderTeam() {
