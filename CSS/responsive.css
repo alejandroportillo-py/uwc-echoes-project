@@ -1,0 +1,32 @@
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 780px) {
+  .main-nav {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--uwc-blue-deep);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+  }
+  .main-nav.is-open { max-height: 320px; }
+  .main-nav ul { flex-direction: column; gap: 0; padding: var(--space-2) var(--space-3); }
+  .main-nav a { display: block; padding: var(--space-2) 0; }
+  .nav-toggle { display: flex; }
+
+  .footer-top { grid-template-columns: 1fr; }
+
+  .hero { grid-template-columns: 1fr; }
+  .hero-media { order: -1; }
+}
+
+@media (max-width: 560px) {
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .memorial-tabs { flex-wrap: wrap; }
+}

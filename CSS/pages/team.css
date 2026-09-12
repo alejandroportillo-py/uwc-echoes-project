@@ -1,0 +1,40 @@
+/* ============================================================
+   THE TEAM — 9 tarjetas: foto, nombre, país, cargo. Sin bio larga.
+   ============================================================ */
+
+.team-hero {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--space-7) 0 var(--space-6);
+  text-align: center;
+}
+.team-hero h1 { color: var(--white); }
+.team-hero p { color: rgba(255,255,255,0.9); max-width: 52ch; margin-inline: auto; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.team-card { text-align: center; }
+
+.team-card .card-media { aspect-ratio: 1/1; border-radius: var(--radius-md) var(--radius-md) 0 0; }
+
+.team-card .card-body { padding: var(--space-2) var(--space-2) var(--space-3); }
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-bottom: 0.15rem;
+}
+
+.team-role { color: var(--uwc-green-deep); font-weight: 600; font-size: var(--fs-small); margin-bottom: 0.15rem; }
+.team-country { color: var(--ink-faint); font-size: var(--fs-small); margin: 0; }
+
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .team-grid { grid-template-columns: 1fr; }
+}

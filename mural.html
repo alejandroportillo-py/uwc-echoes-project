@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mural — Echoes of UWC</title>
+  <meta name="description" content="The Echoes of UWC mural in Parque de Santa Ana connects the physical world to the digital memorial through a QR code.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/variables.css">
+  <link rel="stylesheet" href="CSS/base.css">
+  <link rel="stylesheet" href="CSS/components.css">
+  <link rel="stylesheet" href="CSS/animations.css">
+  <link rel="stylesheet" href="CSS/pages/mural.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="Assets/Images/Logos/uwc-logo-horizontal.png" alt="UWC Costa Rica" class="logo logo--uwc">
+        <img src="Assets/Images/Logos/echoes-logo.png" alt="Echoes of UWC" class="logo logo--echoes">
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="memorial.html">The Memorial</a></li>
+          <li><a href="mural.html" aria-current="page">The Mural</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container mural-hero">
+        <div class="card">
+          <div class="card-media">
+            <img src="Assets/Images/Mural/mural-full.jpg" alt="The Echoes of UWC mural" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'card-placeholder-text\'>[ADD MURAL PHOTO]</span>'">
+          </div>
+        </div>
+        <div>
+          <h1>The Mural</h1>
+          <p class="lead">A physical extension of this memorial, painted in Parque de Santa Ana, Costa Rica. It stands as a bridge between the community and the campus it remembers.</p>
+          <p>[Add description of what the mural represents and why it exists.]</p>
+
+          <div class="qr-steps">
+            <div class="qr-step">
+              <span class="qr-step-num">1</span>
+              <p>Stand in front of the mural in Parque de Santa Ana.</p>
+            </div>
+            <div class="qr-step">
+              <span class="qr-step-num">2</span>
+              <p>Scan the QR code painted on the mural with your phone's camera.</p>
+            </div>
+            <div class="qr-step">
+              <span class="qr-step-num">3</span>
+              <p>You'll be taken straight into this digital memorial — Echoes of UWC.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHERE IS THE MURAL -->
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-head">
+          <h2>Where Is the Mural?</h2>
+          <p class="lead">The mural is located at Parque de Santa Ana, in Santa Ana, Costa Rica.</p>
+        </div>
+
+        <div class="map-wrap">
+          <!--
+            GOOGLE MAPS API WILL BE INSERTED HERE
+            Ver JavaScript/map.js para la estructura preparada:
+            API key, inicialización, marcador y configuración del mapa.
+            No se ha insertado ninguna API key real.
+          -->
+          <div id="google-map-placeholder">
+            <p>[Google Maps will be embedded here]</p>
+          </div>
+        </div>
+        <p class="map-address">📍 Parque de Santa Ana, Santa Ana, Costa Rica</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <h2>Echoes of UWC</h2>
+        <p>Stories become memories. Memories become echoes.</p>
+        <div class="footer-logos">
+          <img src="Assets/Images/Logos/uwc-logo-horizontal.png" alt="UWC Costa Rica">
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="memorial.html">The Memorial</a></li>
+          <li><a href="mural.html">The Mural</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find the Mural</h4>
+        <ul>
+          <li>Parque de Santa Ana</li>
+          <li>Santa Ana, Costa Rica</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Echoes of UWC. A community memorial project.</span>
+    </div>
+  </footer>
+
+  <script src="JavaScript/main.js"></script>
+  <script src="JavaScript/navigation.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=INSERT_API_KEY_HERE&callback=initUWCMap" async defer></script> -->
+  <script src="JavaScript/map.js"></script>
+</body>
+</html>

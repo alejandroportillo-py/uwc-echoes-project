@@ -1,0 +1,159 @@
+/* ============================================================
+   THE MEMORIAL — El Memorial incluye las Memorias (unificado)
+   Playfair Display se usa aquí con más presencia: títulos,
+   citas y encabezados de categoría.
+   ============================================================ */
+
+.memorial-hero {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--space-7) 0 var(--space-6);
+  text-align: center;
+}
+
+.memorial-hero h1 {
+  color: var(--white);
+  font-size: var(--fs-hero);
+}
+
+.memorial-hero p { color: rgba(255,255,255,0.9); max-width: 56ch; margin-inline: auto; }
+
+/* Pestañas de categoría — solo estas, sin "All" ni "Memories" */
+.memorial-tabs {
+  display: flex;
+  gap: var(--space-1);
+  overflow-x: auto;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--space-5);
+}
+
+.memorial-tab {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink-faint);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.memorial-tab:hover { color: var(--uwc-blue-deep); }
+
+.memorial-tab.is-active {
+  color: var(--uwc-blue-deep);
+  border-color: var(--uwc-green);
+}
+
+/* Encabezado propio de cada categoría (contenido específico, no genérico) */
+.memorial-panel-head {
+  margin-bottom: var(--space-4);
+}
+
+.memorial-panel-head h2 {
+  font-family: var(--font-display);
+}
+
+/* Filtro "Browse by place" — EXCLUSIVO de la pestaña Places */
+.place-filter {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: var(--space-4);
+}
+
+.place-filter.is-visible { display: flex; }
+
+/* Grid de tarjetas por categoría */
+.memorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.memorial-empty {
+  padding: var(--space-6) 0;
+  text-align: center;
+  color: var(--ink-faint);
+}
+
+/* Lightbox modal */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(10, 20, 18, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-3);
+}
+
+.lightbox.is-open { display: flex; }
+
+.lightbox-inner {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  max-width: 720px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.lightbox-media { aspect-ratio: 16/10; background: var(--gradient-soft); display:flex; align-items:center; justify-content:center; }
+.lightbox-body { padding: var(--space-3); }
+
+.lightbox-close {
+  position: absolute;
+  top: var(--space-3); right: var(--space-3);
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* --- Leave Your Echo form --- */
+.echo-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-field.full { grid-column: 1 / -1; }
+
+.form-field label {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  background: var(--surface);
+}
+
+.form-field textarea { resize: vertical; min-height: 110px; }
+
+.echo-form .btn { grid-column: 1 / -1; justify-self: start; }
+
+@media (max-width: 780px) {
+  .memorial-grid { grid-template-columns: 1fr 1fr; }
+  .echo-form { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .memorial-grid { grid-template-columns: 1fr; }
+}

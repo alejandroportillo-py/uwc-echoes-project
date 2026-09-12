@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Team — Echoes of UWC</title>
+  <meta name="description" content="The team behind Echoes of UWC, the digital memorial of the former UWC Costa Rica campus.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/variables.css">
+  <link rel="stylesheet" href="CSS/base.css">
+  <link rel="stylesheet" href="CSS/components.css">
+  <link rel="stylesheet" href="CSS/animations.css">
+  <link rel="stylesheet" href="CSS/pages/team.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="Assets/Images/Logos/uwc-logo-horizontal.png" alt="UWC Costa Rica" class="logo logo--uwc">
+        <img src="Assets/Images/Logos/echoes-logo.png" alt="Echoes of UWC" class="logo logo--echoes">
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="memorial.html">The Memorial</a></li>
+          <li><a href="mural.html">The Mural</a></li>
+          <li><a href="team.html" aria-current="page">Team</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="team-hero">
+      <div class="container">
+        <h1>The Team</h1>
+        <p class="lead">The people building Echoes of UWC.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Generado desde JavaScript/team.js — editar el array TEAM_MEMBERS para modificar -->
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <h2>Echoes of UWC</h2>
+        <p>Stories become memories. Memories become echoes.</p>
+        <div class="footer-logos">
+          <img src="Assets/Images/Logos/uwc-logo-horizontal.png" alt="UWC Costa Rica">
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="memorial.html">The Memorial</a></li>
+          <li><a href="mural.html">The Mural</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find the Mural</h4>
+        <ul>
+          <li>Parque de Santa Ana</li>
+          <li>Santa Ana, Costa Rica</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Echoes of UWC. A community memorial project.</span>
+    </div>
+  </footer>
+
+  <script src="JavaScript/main.js"></script>
+  <script src="JavaScript/navigation.js"></script>
+  <script src="JavaScript/team.js"></script>
+</body>
+</html>

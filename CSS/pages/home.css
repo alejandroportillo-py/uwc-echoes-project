@@ -1,0 +1,124 @@
+/* ============================================================
+   HOME
+   ============================================================ */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: stretch;
+  min-height: 78vh;
+  background: var(--ink);
+}
+
+.hero-media { position: relative; overflow: hidden; }
+
+.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  min-height: 340px;
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(16,32,28,0.15) 0%, rgba(16,32,28,0.55) 100%);
+}
+
+.hero-content {
+  background: var(--gradient-primary);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-7) var(--space-5);
+}
+
+.hero-title {
+  font-size: var(--fs-hero);
+  color: var(--white);
+  margin-bottom: var(--space-2);
+}
+
+.hero-subtitle {
+  font-size: var(--fs-lead);
+  color: rgba(255,255,255,0.9);
+  max-width: 40ch;
+  margin-bottom: var(--space-4);
+}
+
+.hero-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+/* Remembrance */
+.remembrance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.remembrance-quote {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--uwc-blue-deep);
+  border-left: 3px solid var(--uwc-green);
+  padding-left: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+@media (max-width: 780px) {
+  .remembrance-grid { grid-template-columns: 1fr; }
+}
+
+/* Campus preview */
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.campus-grid .card-media { aspect-ratio: 1 / 1; }
+
+/* Explorar en 3D — placeholder */
+.explore-3d {
+  margin-top: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--ink);
+  color: var(--white);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+
+.explore-3d h3 { color: var(--white); }
+.explore-3d p { color: rgba(255,255,255,0.7); max-width: 46ch; margin-inline: auto; }
+
+/* Contenedor donde se cargará el modelo 3D (Three.js / GLTF) más adelante */
+#campus-3d-viewer {
+  margin-top: var(--space-3);
+  height: 260px;
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(255,255,255,0.35);
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--fs-small);
+  color: rgba(255,255,255,0.55);
+}
+
+/* Mural teaser */
+.mural-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  background: var(--surface-alt);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.mural-teaser .card-media { aspect-ratio: auto; height: 100%; }
+
+.mural-teaser-body { padding: var(--space-5); }
+
+@media (max-width: 780px) {
+  .campus-grid { grid-template-columns: repeat(2, 1fr); }
+  .mural-teaser { grid-template-columns: 1fr; }
+}

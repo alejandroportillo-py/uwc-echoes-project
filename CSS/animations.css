@@ -1,0 +1,25 @@
+/* ============================================================
+   ANIMATIONS — un único momento orquestado, no efectos dispersos
+   ============================================================ */
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Solo el hero hace la entrada animada de carga */
+.hero-content > * {
+  animation: reveal 700ms cubic-bezier(0.4,0,0.2,1) both;
+}
+.hero-content > *:nth-child(2) { animation-delay: 90ms; }
+.hero-content > *:nth-child(3) { animation-delay: 160ms; }
+
+/* Lightbox */
+.lightbox {
+  transition: opacity var(--transition);
+}
+
+/* Panel de categoría del memorial: cross-fade al cambiar de pestaña */
+.memorial-panel {
+  animation: reveal 350ms ease both;
+}

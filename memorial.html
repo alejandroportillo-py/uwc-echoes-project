@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Memorial — Echoes of UWC</title>
+  <meta name="description" content="Browse the Echoes of UWC memorial archive by category: people, places, events, traditions, art, culture, community and student life.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/variables.css">
+  <link rel="stylesheet" href="CSS/base.css">
+  <link rel="stylesheet" href="CSS/components.css">
+  <link rel="stylesheet" href="CSS/animations.css">
+  <link rel="stylesheet" href="CSS/pages/memorial.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="Assets/Images/Logos/uwc-logo-horizontal.png" alt="UWC Costa Rica" class="logo logo--uwc">
+        <img src="Assets/Images/Logos/echoes-logo.png" alt="Echoes of UWC" class="logo logo--echoes">
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="memorial.html" aria-current="page">The Memorial</a></li>
+          <li><a href="mural.html">The Mural</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="memorial-hero">
+      <div class="container">
+        <h1>The Memorial</h1>
+        <p class="lead">A living archive of the former UWC Costa Rica campus, organized by the people, places and moments that shaped it.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+
+        <!-- Pestañas de categoría — sin "All" ni "Memories" -->
+        <nav class="memorial-tabs" id="memorialTabs" aria-label="Memorial categories"></nav>
+
+        <!-- Encabezado propio de la categoría activa -->
+        <div class="memorial-panel-head" id="panelHead"></div>
+
+        <!-- "Browse by place" — visible únicamente en la pestaña Places -->
+        <div class="place-filter" id="placeFilter" aria-label="Browse by place"></div>
+
+        <!-- Grid de la categoría activa -->
+        <div class="memorial-panel">
+          <div class="memorial-grid" id="memorialGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAVE YOUR ECHO -->
+    <section class="section section--surface" id="leave-echo">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Leave Your Echo</h2>
+          <p class="lead">Share a memory of the campus. It will become part of this archive.</p>
+        </div>
+
+        <form class="echo-form" id="echoForm">
+          <div class="form-field">
+            <label for="echoName">Name</label>
+            <input type="text" id="echoName" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="echoYear">Graduation Year</label>
+            <input type="text" id="echoYear" name="graduationYear">
+          </div>
+          <div class="form-field">
+            <label for="echoRelationship">Relationship with UWC</label>
+            <input type="text" id="echoRelationship" name="relationship" placeholder="Alumni, staff, family...">
+          </div>
+          <div class="form-field">
+            <label for="echoCategory">Category</label>
+            <select id="echoCategory" name="category">
+              <option value="people">People</option>
+              <option value="places">Places</option>
+              <option value="events">Events</option>
+              <option value="traditions">Traditions</option>
+              <option value="art">Art</option>
+              <option value="culture">Culture</option>
+              <option value="community">Community</option>
+              <option value="student-life">Student Life</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="echoTitle">Memory Title</label>
+            <input type="text" id="echoTitle" name="memoryTitle" required>
+          </div>
+          <div class="form-field full">
+            <label for="echoMemory">Memory</label>
+            <textarea id="echoMemory" name="memory" required></textarea>
+          </div>
+          <div class="form-field">
+            <label for="echoPhoto">Photo</label>
+            <input type="file" id="echoPhoto" name="photo" accept="image/*">
+          </div>
+          <div class="form-field">
+            <label for="echoVideo">Video Link</label>
+            <input type="url" id="echoVideo" name="videoLink" placeholder="https://">
+          </div>
+          <div class="form-field full">
+            <label for="echoLocation">Location on Campus</label>
+            <input type="text" id="echoLocation" name="location" placeholder="e.g. the gardens, dorm 3...">
+          </div>
+
+          <!--
+            INSERT API CONFIGURATION HERE
+            Este formulario aún no tiene backend. Ver JavaScript/memorial.js
+            (función initEchoForm) y README.md para conectarlo a una API
+            o base de datos.
+          -->
+          <button type="submit" class="btn btn-solid">Leave Your Echo</button>
+        </form>
+        <p id="echoFormConfirm" hidden>Thank you — your echo has been received.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-media"></div>
+      <div class="lightbox-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <h2>Echoes of UWC</h2>
+        <p>Stories become memories. Memories become echoes.</p>
+        <div class="footer-logos">
+          <img src="Assets/Images/Logos/uwc-logo-horizontal.png" alt="UWC Costa Rica">
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="memorial.html">The Memorial</a></li>
+          <li><a href="mural.html">The Mural</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find the Mural</h4>
+        <ul>
+          <li>Parque de Santa Ana</li>
+          <li>Santa Ana, Costa Rica</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Echoes of UWC. A community memorial project.</span>
+    </div>
+  </footer>
+
+  <script src="JavaScript/main.js"></script>
+  <script src="JavaScript/navigation.js"></script>
+  <script src="JavaScript/memorial.js"></script>
+</body>
+</html>
